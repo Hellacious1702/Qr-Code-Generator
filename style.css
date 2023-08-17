@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+
+body{
+    background: linear-gradient(45deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    background-size: 100% 400%;
+}
+
+.NavBar{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.Pages ul a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+.Pages ul a:hover{
+    background: grey;
+    color: white;
+    border-radius: 5px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.Card{
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+}
+
+.input{
+    display: flex;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    outline: none;
+}
+
+.generated{
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+.generated img{
+    border: 5px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button{
+    display: flex;
+    margin-top: 20px;
+}
+#downloadBTN{
+    margin-left: 20px ;
+}
+#downloadBTN , #generate{
+    padding: 10px 50px;
+    border-radius: 10px;
+    background: #ff0021;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#downloadBTN:hover , #generate:hover{
+    background: black;
+}
