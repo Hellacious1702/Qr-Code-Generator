@@ -3,38 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR-Code Generator | Varad Sandeep Naik</title>
 
+    <!-- Assigning Title & Title Logo -->
+    <title>QR-Code Generator | Varad Sandeep Naik</title>
+    <link rel="shortcut icon" href="Resources/Images/logo.ico" type="image/x-icon">
+
+    <!-- Linking CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <!-- Creating DIV for NavBar -->
     <div class="NavBar">
+
+        <!-- Creating DIV for Brand Logo -->
         <div class="Brand">
-            <h1>QRGenerator</h1>
+            <!-- Adding Brand Logo as Text -->
+            <h1>QR Code Generator</h1>
         </div>
+
+        <!-- Creating DIV to store connected pages on NavBar -->
         <div class="Pages">
             <ul>
                 <a href="index.html">Home</a>
                 <a href="https://github.com/Hellacious1702">Github</a>
                 <a href="https://www.instagram.com/varad5878/">Instagram</a>
-                <a href="">Projects</a>
+                <a href="https://github.com/Hellacious1702?tab=repositories">Projects</a>
             </ul>
         </div>
     </div>
+
+    <!-- Creating DIV that will contain about and the QR Generator -->
     <div class="container">
+
+        <!-- Creating DIV Holding the "About the Webiste" Section -->
+        <div class="about">
+            <p>This is a Qr-Code-Generator Project Created by <a href="https://github.com/Hellacious1702"> VARAD SANDEEP NAIK </a>as part of a WebDevelopment Learning . <br>The Whole Website is created with HTML , CSS & JAVASCRIPT . <br>The Website is Deployed Using Github Pages .</p>
+        </div>
+
+        <!-- Craeting DIV that will carry main input and Generated QR -->
         <div class="Card">
+
+            <!-- DIV Holding The Input Tab -->
             <div class="input">
-                <input type="search" placeholder="Please Enter The URL" id="input-Box" required>
+                <input type="search" placeholder="Please Enter The URL or TEXT" id="input-Box" required>
             </div>
+
+            <!-- DIV that will Display a Generated QR After User Input -->
             <div class="generated" id="generated">
-                <img src="" alt="" id="generatedQR">
+                <img src="" id="generatedQR">
             </div>
+
+            <!-- Creating DIV Holding Generate and Download Button -->
             <div class="button">
-                <button id="generate">Generate</button>
-                <a href="" download="QrCode.png" id="download"><button id="downloadBTN">download</button></a>
+
+                <!-- Button that will generate a QR (A Event Listner is Attached to this button in Script.js) -->
+                <button id="generate"><img src="Resources/Icons/qrcode-solid.svg">Generate</button>
+
+                <!-- Button that will Download a QR (A Event Listner is Attached to this button in Script.js) -->
+                <a href="" download="QrCode.png" id="download"><button id="downloadBTN"><img src="Resources/Icons/download-solid.svg" id="svg">Download</button></a>
             </div>
         </div>
     </div>
+
+    <!-- Linking the Javascript File -->
     <script src="script.js"></script>
 </body>
 </html>

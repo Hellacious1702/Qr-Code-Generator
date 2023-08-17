@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+:root{
+    --Background : linear-gradient(180deg, #647DEE, #7F53AC);
+
+    --Pages-ul-a-Border-Radius: 5px;
+    --card-Border-Radius: 24px;
+    --generated-img-Border-Radius: 10px;
+
+    --Button-color: red;
+    --Button-color-hover: #fe2c54;
+    
+
+    --White : #ffffff;
+    --Black : #000000;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,43 +22,78 @@
 }
 
 body{
-    background: linear-gradient(45deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
-    background-size: 100% 400%;
+    height: 100vh;
+    background-image: var(--Background);
+    background-size: 400% 400%;
+    animation: infinitebg 30s ease infinite;
+}
+
+@keyframes infinitebg {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 50% 100%;
+    }
+    100%{
+        background-position: 50% 0;
+    }
 }
 
 .NavBar{
-    background: white;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    color: var(--White);
+    padding: 20px 5%;
 }
 
 .Pages ul a{
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: var(--Black);
     display: inline-block;
     padding: 5px 20px;
+    color: var(--White);
 }
 
 .Pages ul a:hover{
-    background: grey;
-    color: white;
-    border-radius: 5px;
+    background: var(--Black);
+    color: var(--White);
+    border-radius: var(--Pages-ul-a-Border-Radius);
 }
 
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
 }
 
+.about{
+    width: 700px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.about p{
+    color: var(--White);
+    font-size: 16px;
+}
+
+.about p a{
+    color: var(--White);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
 .Card{
-    background: white;
+    background: var(--White);
     padding: 30px;
-    border-radius: 24px;
+    border-radius: var(--card-Border-Radius);
+    box-shadow: 10px 10px 20px var(--Black);
 }
 
 .input{
@@ -54,8 +104,9 @@ input{
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 2px solid var(--Black);
     outline: none;
+    box-shadow: 5px 5px 10px grey;
 }
 
 .generated{
@@ -65,28 +116,48 @@ input{
 }
 
 .generated img{
-    border: 5px solid black;
+    border: 5px solid var(--Black);
     padding: 5px;
-    border-radius: 10px;
+    border-radius: var(--generated-img-Border-Radius);
     cursor: pointer;
+    box-shadow: 5px 5px 10px grey;
 }
 .button{
     display: flex;
     margin-top: 20px;
 }
+
+.button button{
+    display: flex;
+    align-items: center;
+}
+
+.button a{
+    text-decoration: none;
+}
+
+.button img{
+    width: 20px;
+    margin-right: 10px;
+}
+
 #downloadBTN{
     margin-left: 20px ;
 }
 #downloadBTN , #generate{
     padding: 10px 50px;
     border-radius: 10px;
-    background: #ff0021;
-    color: white;
+    font-size: 16px;
+    background: var(--Button-color);
+    color: var(--Black);
+    font-weight: bolder;
     border: none;
     outline: none;
     cursor: pointer;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px grey;
 }
 
 #downloadBTN:hover , #generate:hover{
-    background: black;
+    background: var(--Button-color-hover);
 }
