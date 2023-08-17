@@ -19,7 +19,7 @@
         <!-- Creating DIV for Brand Logo -->
         <div class="Brand">
             <!-- Adding Brand Logo as Text -->
-            <h1>QR Code Generator</h1>
+            <h1>QR <span>Code</span> Generator</h1>
         </div>
 
         <!-- Creating DIV to store connected pages on NavBar -->
@@ -38,8 +38,18 @@
 
         <!-- Creating DIV Holding the "About the Webiste" Section -->
         <div class="about">
-            <p>This is a Qr-Code-Generator Project Created by <a href="https://github.com/Hellacious1702"> VARAD SANDEEP NAIK </a>as part of a WebDevelopment Learning . <br>The Whole Website is created with HTML , CSS & JAVASCRIPT . <br>The Website is Deployed Using Github Pages .</p>
+            <p>This is a Qr-Code-Generator & Bar-Code-Generator Project Created by <a href="https://github.com/Hellacious1702"> VARAD SANDEEP NAIK </a>as part of a WebDevelopment Learning . <br>The Whole Website is created with HTML , CSS & JAVASCRIPT . <br>The Website is Deployed Using Github Pages .</p>
         </div>
+
+        <!-- Creating a DIV Holding a tab where user can choose if they want a QR or Bar Code -->
+        <div class="options">
+            <!-- Adding Select Options for both QR and Bar Code Respectively -->
+            <select name="" id="option">
+                <option value="QR">QR Code</option>
+                <option value="BarCode">BAR Code</option>
+            </select>
+        </div>
+
 
         <!-- Craeting DIV that will carry main input and Generated QR -->
         <div class="Card">
@@ -61,7 +71,7 @@
                 <button id="generate"><img src="Resources/Icons/qrcode-solid.svg">Generate</button>
 
                 <!-- Button that will Download a QR (A Event Listner is Attached to this button in Script.js) -->
-                <a href="" download="QrCode.png" id="download"><button id="downloadBTN"><img src="Resources/Icons/download-solid.svg" id="svg">Download</button></a>
+                <a href="" download="" id="download"><button id="downloadBTN"><img src="Resources/Icons/download-solid.svg" id="svg">Download</button></a>
             </div>
         </div>
     </div>

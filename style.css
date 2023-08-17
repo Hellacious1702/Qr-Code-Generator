@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
 :root{
-    --Background : linear-gradient(180deg, #647DEE, #7F53AC);
+    --Background : linear-gradient(45deg, #647DEE, #7F53AC , #cda2f9 , #0732f2);
 
     --Pages-ul-a-Border-Radius: 5px;
     --card-Border-Radius: 24px;
+    --option-Border-Radius: 24px;
     --generated-img-Border-Radius: 10px;
 
-    --Button-color: red;
-    --Button-color-hover: #fe2c54;
+    --logo-span: #fe2c54;
+
+    --Button-color: #fe2c54;
+    --Button-color-hover: red ;
     
 
     --White : #ffffff;
@@ -25,7 +28,7 @@ body{
     height: 100vh;
     background-image: var(--Background);
     background-size: 400% 400%;
-    animation: infinitebg 30s ease infinite;
+    animation: infinitebg 60s ease-in-out infinite;
 }
 
 @keyframes infinitebg {
@@ -49,6 +52,10 @@ body{
     padding: 20px 5%;
 }
 
+.Brand h1 span{
+    color: var(--logo-span);
+}
+
 .Pages ul a{
     list-style: none;
     text-decoration: none;
@@ -69,13 +76,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .about{
     width: 700px;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     text-align: center;
 }
 .about p{
@@ -87,6 +94,18 @@ body{
     color: var(--White);
     text-decoration: none;
     font-weight: bolder;
+}
+
+.options{
+    margin-block: 30px;
+    border-radius: var(--option-Border-Radius);
+    box-shadow: 10px 10px 20px var(--Black);
+}
+
+select{
+    padding: 10px 40px;
+    border-radius: var(--option-Border-Radius);
+    outline: none;
 }
 
 .Card{
@@ -121,6 +140,7 @@ input{
     border-radius: var(--generated-img-Border-Radius);
     cursor: pointer;
     box-shadow: 5px 5px 10px grey;
+    max-height: 150px;
 }
 .button{
     display: flex;
